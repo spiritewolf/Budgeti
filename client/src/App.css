@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  margin: 10px 30px 10px 30px;
+  width: 90%;
+}
+
+.money-header {
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  color: #9c88ff;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  position: sticky;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* TRANSACTION PAGE */
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 10px 0px;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+.float-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+}
+.floaty {
+  padding-left: 20px;
+  width: 100%
+}
+.floater {
+  width: 100%
+}
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  color: gray;
+}
+
+/* select {
+  font-family: 'Roboto Mono', monospace;
+	position: relative;
+	font-size: 15px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+	color: #808080;
+	border: 1px solid #dedede;
+	appearance: none;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	--webkit-appearance: none;
+	--moz-appearance: none;
+}
+select::--ms-expand {
+  display: none;
+} */
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  opacity: 80%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+.overflow {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+.list li.dining {
+  border-right: 5px solid #c0392b;
+  background-color: rgb(252, 157, 106, .05);
+}
+.list li.skincare {
+  border-right: 5px solid #c0392b;
+  background-color: rgb(41, 71, 204, .05);
+}
+.list li.groceries {
+  border-right: 5px solid #c0392b;
+  background-color: rgb(0, 112, 14, .05);
+}
+.list li.pet {
+  border-right: 5px solid #c0392b;
+  background-color: rgb(27, 150, 0, .05);
+}
+.list li.bill {
+  border-right: 5px solid #c0392b;
+  background-color: rgb(252, 252, 5, .05);
+}
+.list li.nope {
+  border-right: 5px solid #9c88ff;
+  background-color: rgb(156, 136, 255, .2);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}

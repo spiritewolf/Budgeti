@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --all: all .5s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  margin: 10px 30px 10px 30px;
+  width: 90%;
+}
+nav {
+  margin-left: 0;
+  margin-top: 10px;
+  height: 7vh;
+  display: inline-flex;
+  align-items: center;
+}
+
+nav ul {
+  padding: 0px;
+  color: white;
+  display: inline-flex;
+  margin-left: 15px;
+  margin-right: 15px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+nav ul li {
+  background-color: white;
+  margin-left: 15px;
+  border-radius: 0.2vw;
+  height: 35px;
+  width: 100px;
+  margin-right: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 0.3vw solid #9c88ff;
+  padding: 5px;
+
+}
+nav ul li p {
+  color: #9c88ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav h1{
+  margin-left: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  color: #9c88ff;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/* login PAGE */
+.login-container {
+  margin: 10px 30px 10px 30px;
+  width: 90%;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.login-form {
+  margin: 20px 0;
+  width: 80%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  outline: none;
+  font-size: 16px;
+  margin: 10px 45px 10px 50px;
+  padding: 10px;
+  width: 80%;
+}
+.signup-btn {
+  opacity: 50%;
+}
+.login-form button:hover {
+  transition: .5s ease;
+  background: #fff;
+  color:  #9c88ff;
+}
+
+/* COOL BUTTON STYLING
+https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda
+*/
+
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding-left: 10px;
+  color: gray;
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: gray;
+  font-size: 12px;
+}
+
+.user-box button {
+  position: relative;
+  display: block;
+  color: #9c88ff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  background-color: #fff;
+  opacity: 50%;
+  border: 0;
+  margin: 10px 45px 10px 50px;
+  padding: 10px;
+  width: 80%;
+}
+
+.user-box button:hover {
+  background: #9c88ff;
+  color: #fff;
+}
+
+.user-box button span {
+  position: absolute;
+  display: block;
+}
+
+.user-box button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #9c88ff);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.user-box button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #9c88ff);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.user-box button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #9c88ff);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.user-box button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #9c88ff);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
