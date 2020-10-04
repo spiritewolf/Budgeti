@@ -3,6 +3,4 @@
 
 Try it for yourself! 
 http://budgeti.herokuapp.com
-
-<img src="https://giphy.com/embed/PxUxwxfjmeQ1WonXdU" width="464" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></img>
-
+![gif](how to put gif in readme github)
