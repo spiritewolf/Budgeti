@@ -3,4 +3,5 @@
 
 Try it for yourself! 
 http://budgeti.herokuapp.com
-![gif](how to put gif in readme github)
+
+![gif](https://media.giphy.com/media/PxUxwxfjmeQ1WonXdU/giphy.gif)
